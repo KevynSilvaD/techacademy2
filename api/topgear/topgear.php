@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>modulo 2</title>
     <link rel="stylesheet" href="css/style.scss">
@@ -26,7 +25,7 @@
             Jogos
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="api/topgear/topgear.php">Top gear</a></li>
+            <li><a class="dropdown-item" href="api/topgear/">Top gear</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
@@ -42,8 +41,10 @@
 </nav>
    </head>
 <body>
+    
+
     <script src="js/bootstrap.bundle.min.js"></script>
     <h1>ola mundo</h1>
     <p>testando minha pagina</p>
-</body>
+    <img src="topgearbackground.jpg" alt="back" title="background">
 </html>
