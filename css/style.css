@@ -1,3 +1,163 @@
+* {
+  padding: 0;
+  margin: 0;
+}
 
+body {
+  color: #fff;
+  background: #1f1d1b;
+  font: "family Bungee", Arial, Verdana;
+  margin-top: 120px;
+}
+
+.container {
+  width: 90%;
+  margin: 30px auto;
+}
+
+.banner {
+  margin: 10px;
+}
+.banner img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+.flex .flex-colum {
+  width: 98%;
+  border: 1px solid #06bfff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.flex .flex-colum img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+h2 {
+  color: #06bfff;
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
+.flex-game {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-game .flex-game-imagem {
+  width: 98%;
+}
+.flex-game .flex-game-imagem img {
+  width: 100%;
+  border-radius: 10px;
+}
+.flex-game .flex-game-descricao {
+  width: 98%;
+}
+
+.header {
+  background: #171a21;
+  box-shadow: 0 0 10px #000;
+  width: 100%;
+  position: fixed;
+  padding: 15px;
+  box-sizing: border-box;
+  top: 0;
+  z-index: 9;
+}
+.header .header-logo {
+  float: left;
+}
+.header .header-logo img {
+  width: 200px;
+}
+.header .header-menu {
+  float: right;
+  border: 1px solid #fff;
+  background: #CCC;
+  padding: 5px;
+  border-radius: 10px;
+}
+.header .header-menu img {
+  width: 35px;
+}
+.header .header-nav {
+  width: 100%;
+  display: none;
+}
+.header .header-nav ul {
+  list-style: none;
+}
+.header .header-nav ul li {
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #06bfff;
+}
+.header .header-nav ul li a {
+  color: #06bfff;
+  text-decoration: none;
+}
+
+.show {
+  display: inline-block !important;
+}
+
+.footer {
+  background: #171a21;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px #000;
+}
+
+@media (min-width: 480px) and (max-width: 1920px) {
+  .header .header-menu {
+    display: none !important;
+  }
+  .header .header-nav {
+    width: auto;
+    display: block;
+    float: right;
+  }
+  .header .header-nav ul li {
+    display: inline-block;
+    border: 0;
+    padding: 20px;
+  }
+  .header .header-nav ul li a:hover {
+    color: #fff;
+  }
+
+  .container {
+    width: 1000px;
+    margin: 30px auto;
+  }
+
+  .flex .flex-colum {
+    width: 23%;
+    margin: 5px;
+  }
+
+  .flex-game .flex-game-imagem {
+    width: 30%;
+  }
+  .flex-game .flex-game-descricao {
+    width: 68%;
+    margin: 10px;
+  }
+  .flex-game .flex-game-descricao p {
+    line-height: 25px;
+    margin-bottom: 20px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
