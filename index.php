@@ -1,80 +1,123 @@
 <!DOCTYPE html>
-<html lang="pt_br">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SG</title>
+    <title>Stem - Sua página de Games</title>
+    <meta name="description" content="Sua página de Games, com lançamentos e jogos pagos e gratuitos">
+    <meta name="keywords" content="games, jogos, lançamentos">
 
-
-    <base href="http://localhost/techacademy2/">
+    <base href="https://stemverde.000webhostapp.com/stem/">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Jersey+25&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="shortcut icon" href="images/icone.png">
 </head>
 
 <body>
-    <header class="header">
-        <a href="home" title="home" class="header-logo" data-aos="fade-right">
-            <img src="imagens/logo.png" alt="SG">
-        </a>
+    <?php
+        //buscar os dados da API de games
+        $url = "https://stemverde.000webhostapp.com/stem/api/games.php";
+        //importar os dados da API
+        $dadosApi = file_get_contents($url);
+        //transformar de JSON para array ou objeto
+        $dadosJogos = json_decode($dadosApi);
 
-        <a href="javascript:showMenu()" title="Mostrar menu" class="header-menu" data-aos="fade-left">
-            <img src="imagens/menu.webp" alt="Menu">
-        </a>
+        //print_r($dadosJogos);
+    ?>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.php">
+                <img src="images/logo.png" alt="Stem">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="quem-somos">Quem Somos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Games
+                        </a>
+                        <ul class="dropdown-menu">
+                            <?php
+                                foreach($dadosJogos as $dados) {
+                                    echo "<li><a class='dropdown-item' href='game/{$dados->id}'>{$dados->nome}</a>
+                                    </li>";
+                                }
+                            ?>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="arquivo.zip" title="Download dos Arquivos" class="btn btn-warning">
+                        <i class="fas fa-download"></i>
+                        Arquivos
+                    </a>
+                    <a href="contato" title="Contato"
+                    class="btn btn-info">
+                        <i class="fas fa-envelope"></i>
+                        Entre em Contato
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-        <nav class="header-nav" data-aos="fade-left">
-            <ul>
-                <li><a href="home" title="home">HOME</a></li>
-                <li><a href="quem-somos" title="quem somos">Quem somos</a></li>
-                <li><a href="lançamentos" title="quem somos">lançamentos</a></li>
-                <li><a href="contato" title="quem somos">Contato</a></li>
-
-            </ul>
-        </nav>
-    </header>
     <main>
         <?php
-        if (isset($_GET["param"])) {
+            //print_r($_GET);
+            $pagina = "home";
+            //verificar se foi clicado em algum menu
+            if (isset($_GET["pagina"])) {
+                $pagina = $_GET["pagina"] ?? "home";
+                // games/1
+                $pagina = explode("/", $pagina);
+                //print_r($pagina);
+                $codigo = $pagina[1] ?? NULL;
+                $pagina = $pagina[0] ?? "home";
+            }
 
-            $param = $_GET["param"];
-            $p = explode("/", $param);
-        }
+            $pagina = "pages/{$pagina}.php";
 
-        $page = $p[0] ?? "home";
-        $jogo = $p[1] ?? null;
-
-        if ($page == "jogo") {
-            $pagina = "jogo/{$jogo}.php";
-        } else {
-            $pagina = "paginas/{$page}.php";
-        }
-
-        if (file_exists($pagina)) {
-            include $pagina;
-        } else {
-            include "paginas/erro.php";
-        }
+            if (file_exists($pagina)) {
+                include $pagina;
+            } else {
+                include "pages/erro.php";
+            }
         ?>
     </main>
-    <footer class="footer">
-        <p>Desenvolvido por Kevyn silva</p>
+
+    <footer class="footer" data-aos="fade">
+        <p class="text-center">
+            <strong>STEM - Sua Loja de Games de Boa Esperança</strong>
+        </p>
+        <p class="text-center">
+            Desenvolvido por Mayco Dyékisson da Silva
+        </p>
     </footer>
 
-
+    <!-- Scripts -->
+    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/fslightbox.js"></script>
     <script>
         AOS.init();
-        function showMenu() {
-            var menu = document.querySelector(".header-nav");
-            menu.classList.toggle("show");
-        }
     </script>
-
 </body>
 
 </html>
