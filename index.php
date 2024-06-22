@@ -12,33 +12,33 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css">
-
     <link rel="shortcut icon" href="images/icone.png">
+    
 </head>
 
 <body>
     <?php
-        //buscar os dados da API de games
-        $url = "http://localhost/techacademy2/api/games.php";
-        //importar os dados da API
-        $dadosApi = file_get_contents($url);
-        //transformar de JSON para array ou objeto
-        $dadosJogos = json_decode($dadosApi);
+    $url = "http://localhost/techacademy2/api/games.php";
+    //importar dados
+    $dadosApi = file_get_contents($url);
+    $dadosJogos = json_decode($dadosApi);
 
-        //print_r($dadosJogos);
     ?>
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.php">
                 <img src="images/logo.png" alt="Stem verde">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -50,27 +50,27 @@
                         <a class="nav-link" href="quem-somos">Quem Somos</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
                             Games
                         </a>
                         <ul class="dropdown-menu">
                             <?php
-                                foreach($dadosJogos as $dados) {
-                                    echo "<li><a class='dropdown-item' href='game/{$dados->id}'>{$dados->nome}</a>
+                            foreach ($dadosJogos as $dados) {
+                                echo "<li><a class='dropdown-item' href='game/{$dados->id}'>{$dados->nome}</a>
                                     </li>";
-                                }
+                            }
                             ?>
                         </ul>
                     </li>
                 </ul>
                 <div class="d-flex">
                     <a href="arquivo.zip" title="Download dos Arquivos" class="btn btn-warning">
-                    <i class="fa-solid fa-file-arrow-down"></i>
+                        <i class="fa-solid fa-file-arrow-down"></i>
                         <strong>Arquivos</strong>
                     </a>
-                    <a href="contato" title="Contato"
-                    class="btn btn-info">
-                    <i class="fa-solid fa-square-envelope"></i>
+                    <a href="contato" title="Contato" class="btn btn-info">
+                        <i class="fa-solid fa-square-envelope"></i>
                         <strong>Fale Comigo</strong>
                     </a>
                 </div>
@@ -80,25 +80,25 @@
 
     <main>
         <?php
-            //print_r($_GET);
-            $pagina = "home";
-            //verificar se foi clicado em algum menu
-            if (isset($_GET["pagina"])) {
-                $pagina = $_GET["pagina"] ?? "home";
-                // games/1
-                $pagina = explode("/", $pagina);
-                //print_r($pagina);
-                $codigo = $pagina[1] ?? NULL;
-                $pagina = $pagina[0] ?? "home";
-            }
+        //print_r($_GET);
+        $pagina = "home";
+        //verificar se foi clicado em algum menu
+        if (isset($_GET["pagina"])) {
+            $pagina = $_GET["pagina"] ?? "home";
+            // games/1
+            $pagina = explode("/", $pagina);
+            //print_r($pagina);
+            $codigo = $pagina[1] ?? NULL;
+            $pagina = $pagina[0] ?? "home";
+        }
 
-            $pagina = "pages/{$pagina}.php";
+        $pagina = "pages/{$pagina}.php";
 
-            if (file_exists($pagina)) {
-                include $pagina;
-            } else {
-                include "pages/erro.php";
-            }
+        if (file_exists($pagina)) {
+            include $pagina;
+        } else {
+            include "pages/erro.php";
+        }
         ?>
     </main>
 

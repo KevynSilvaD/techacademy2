@@ -5,20 +5,19 @@ $dadosApi = file_get_contents($url);
 
 $dadosBanner = json_decode($dadosApi);
 
-//print_r($dadosBanner);
 ?>
 <div id="carouselExample" class="carousel slide" data-aos="fade">
     <div class="carousel-inner">
         <?php
-            foreach($dadosBanner as $dados) {
-                ?>
-                <div class="carousel-item active">
-                    <a href="game/<?=$dados->id_game?>">
-                        <img src="<?=$dados->imagem?>" class="d-block w-100"           alt="<?=$dados->nome?>">
-                    </a>
-                </div>
-                <?php
-            }
+        foreach ($dadosBanner as $dados) {
+            ?>
+            <div class="carousel-item active">
+                <a href="game/<?= $dados->id_game ?>">
+                    <img src="<?= $dados->imagem ?>" class="d-block w-100" alt="<?= $dados->nome ?>">
+                </a>
+            </div>
+            <?php
+        }
         ?>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -35,31 +34,27 @@ $dadosBanner = json_decode($dadosApi);
     <h1 class="text-center">
         <strong>Jogos em Destaque</strong>
     </h1>
-    <?php
-        //print_r($dadosJogos);
-    ?>
 
     <div class="row">
         <?php
-            foreach($dadosJogos as $dados) {
-                ?>
-                <div class="col-12 col-md-4">
-                    <div class="card" data-aos="fade-right">
-                        <img src="<?=$dados->poster?>"
-                        alt="<?=$dados->nome?>" class="card-img-top">
-                        <div class="card-text text-center">
-                            <p><strong><?=$dados->nome?></strong></p>
-                            <p>
-                                <a href="game/<?=$dados->id?>" title="Detalhes do Jogo" class="btn btn-success">
-                                    <i class="fas fa-search"></i>
-                                    <strong>Detalhes</strong>
-                                </a>
-                            </p>
-                        </div>
+        foreach ($dadosJogos as $dados) {
+            ?>
+            <div class="col-12 col-md-4">
+                <div class="card" data-aos="fade-right">
+                    <img src="<?= $dados->poster ?>" alt="<?= $dados->nome ?>" class="card-img-top">
+                    <div class="card-text text-center">
+                        <p><strong><?= $dados->nome ?></strong></p>
+                        <p>
+                            <a href="game/<?= $dados->id ?>" title="Detalhes do Jogo" class="btn btn-success">
+                                <i class="fa-brands fa-searchengin"></i>
+                                <strong>Detalhes</strong>
+                            </a>
+                        </p>
                     </div>
                 </div>
-                <?php
-            }
+            </div>
+            <?php
+        }
         ?>
     </div>
 </div>

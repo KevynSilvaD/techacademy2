@@ -5,65 +5,75 @@ $font2: Inter, Arial, Tahoma;
 
 .navbar {
     background: $primary;
+
     .navbar-brand img {
         height: 80px;
         width: 150px;
     }
+
     .nav-link {
         font: 22px $font1;
         color: #FFF;
         text-transform: uppercase;
+
         &:hover {
             color: $secondary;
         }
     }
+
     .navbar-nav .nav-link.show {
         color: $secondary;
     }
+
     .dropdown-menu {
         background: $primary;
         border-radius: 0;
         border-top: 5px solid $secondary;
+
         .dropdown-item {
             font: 20px $font1;
             text-transform: uppercase;
             color: $secondary;
         }
     }
+
     .btn {
         margin-left: 5px;
         background: #fff;
     }
-    .navbar-toggler{
+
+    .navbar-toggler {
         background: #198754;
         font: $font1;
     }
-    
+
 }
 
 .btn {
     font: 20px $font1;
     border-radius: 10;
-    border-color:#222;
+    border-color: #222;
     background: #198754;
-    &:hover{
-        color:$secondary
+
+    &:hover {
+        color: $secondary
     }
 }
 
 h1 {
     font: 36px $font1;
-    color:  $primary;
+    color: $primary;
     margin: 30px;
 }
 
-h2{
+h2 {
     font: 30px $font1;
     margin: 20px;
 }
+
 .card {
-    margin-bottom: 15px;
-    box-shadow: 0 0 10px #444444;
+    margin-bottom: 25px;
+    box-shadow: 0 0 20px #198754;
 }
 
 .footer {
@@ -77,4 +87,3 @@ body {
     margin-top: 102px;
     background: #08e90413;
 }
-
