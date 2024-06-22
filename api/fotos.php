@@ -2,9 +2,9 @@
     header('Access-Control-Allow-Origin: *');
     header("Content-type: application/json; charset=utf-8");
 
-    $path = "https://stemverde.000webhostapp.com/stem/images/";
+    $path = "http://localhost/techacademy2/images/";
 
-    $fotos[1] = array(
+    $fotos[3] = array(
         array("foto"=>"{$path}imagem1.gif"),
         array("foto"=>"{$path}imagem2.png"),
         array("foto"=>"{$path}imagem3.png"),
@@ -18,7 +18,7 @@
         array("foto"=>"{$path}sf4.jpg"),
     );
 
-    $fotos[3] = array(
+    $fotos[1] = array(
         array("foto"=>"{$path}mk11.jpg"),
         array("foto"=>"{$path}mk12.jpg"),
         array("foto"=>"{$path}mk13.jpg"),

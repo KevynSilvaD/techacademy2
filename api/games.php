@@ -2,17 +2,18 @@
     header('Access-Control-Allow-Origin: *');
     header("Content-type: application/json; charset=utf-8");
 
-    $path = "https://stemverde.000webhostapp.com/stem/images/";
+    $path = "http://localhost/techacademy2/images/";
 
-    $games[1] = array("id"=>1, "nome"=>"Dream of Gear", "descricao"=>"<p>Dream of gear é um game de plataforma em 2D,no qual você vive a pele de CLB um jovem sonhador que deseja se tornar piloto de corridas, e seu objetivo é chegar ao carro antigo de seu avô,coletando as peças necessárias e desviando de objetos que podem te ferir.</p>
+    $games[3] = array("id"=>3, "nome"=>"Dream of Gear", "descricao"=>"<p>Dream of gear é um game de plataforma em 2D,no qual você vive a pele de CLB um jovem sonhador que deseja se tornar piloto de corridas, e seu objetivo é chegar ao carro antigo de seu avô,coletando as peças necessárias e desviando de objetos que podem te ferir.</p>
     <p><strong>Corra, Pule e não se esqueça de desviar dos passarinhos, colete as caixas para bonus mas cuidado com as armadilhas.</strong></p>
-    <p>lançado para PC, Arcade game</p>
-    <p>input: teclado e mouse</p>",
+    <p>Lançado para PC, Arcade game</p>
+    <p>input: Teclado e Mouse</p>",
     "poster"=>"{$path}poster_dream.png","banner"=>"{$path}dream.png","trailer"=>"https://www.youtube.com/embed/3sAU1fPK0K4");
+
     $games[2] = array("id"=>2, "nome"=>"Street Fighter 6", "descricao"=>"<p>Street Fighter 6 é um jogo eletrônico de luta desenvolvido e publicado pela Capcom. É a sétima entrada principal da franquia Street Fighter, e foi lançado para PlayStation 4, PlayStation 5, Windows e Xbox Series X/S em 2 de junho de 2023, ao passo que uma versão para arcade será publicada pela Taito mais tarde no mesmo ano.</p>",
     "poster"=>"{$path}poster_sf6.jpg","banner"=>"{$path}sf6.jpg","trailer"=>"https://www.youtube.com/embed/3sAU1fPK0K4");
 
-    $games[3] = array("id"=>3, "nome"=>"Mortal Kombat 1", "descricao"=>"<p>Após cessar o suporte para Mortal Kombat 11, a NetherRealm Studios revelou que estava trabalhando em um novo projeto em julho de 2021. O dublador de Johnny Cage, Andrew Bowen, indicou que a décima segunda parcela estava em desenvolvimento em um tweet excluído às pressas.</p>
+    $games[1] = array("id"=>1, "nome"=>"Mortal Kombat 1", "descricao"=>"<p>Após cessar o suporte para Mortal Kombat 11, a NetherRealm Studios revelou que estava trabalhando em um novo projeto em julho de 2021. O dublador de Johnny Cage, Andrew Bowen, indicou que a décima segunda parcela estava em desenvolvimento em um tweet excluído às pressas.</p>
     <p>Em 18 de maio de 2023, a NetherRealm Studios anunciou Mortal Kombat 1 com data de lançamento para 19 de setembro de 2023. É uma reinicialização da série e se passa na linha do tempo da Nova Era criada por Liu Kang depois que ele alcançou a divindade em Mortal Kombat 11 em 2019.[3] A NetherRealm Studios também anunciou que aqueles que encomendarem qualquer versão do jogo para PS5 e Xbox Series antes do lançamento também receberão acesso a uma versão beta em agosto e, após o lançamento do jogo, a NetherRealm fornecerá cross-play e cross-progression.[4]</p>",
     "poster"=>"{$path}poster_mk1.jpg","banner"=>"{$path}mk1.jpg","trailer"=>"https://www.youtube.com/embed/Ue1Yo-3QnRc");
 

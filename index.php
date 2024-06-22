@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stem - Sua página de Games</title>
-    <meta name="description" content="Sua página de Games, com lançamentos e jogos pagos e gratuitos">
-    <meta name="keywords" content="games, jogos, lançamentos">
+    <title>Stem Verde</title>
+    <meta name="description" content="Sua página de Games pagos e gratuitos">
+    <meta name="keywords" content="games, jogos, gratuitos">
 
-    <base href="https://stemverde.000webhostapp.com/stem/">
+    <base href="http://localhost/techacademy2/">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Jersey+25&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
@@ -25,7 +25,7 @@
 <body>
     <?php
         //buscar os dados da API de games
-        $url = "https://stemverde.000webhostapp.com/stem/api/games.php";
+        $url = "http://localhost/techacademy2/api/games.php";
         //importar os dados da API
         $dadosApi = file_get_contents($url);
         //transformar de JSON para array ou objeto
@@ -36,7 +36,7 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.php">
-                <img src="images/logo.png" alt="Stem">
+                <img src="images/logo.png" alt="Stem verde">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -65,13 +65,13 @@
                 </ul>
                 <div class="d-flex">
                     <a href="arquivo.zip" title="Download dos Arquivos" class="btn btn-warning">
-                        <i class="fas fa-download"></i>
-                        Arquivos
+                    <i class="fa-solid fa-file-arrow-down"></i>
+                        <strong>Arquivos</strong>
                     </a>
                     <a href="contato" title="Contato"
                     class="btn btn-info">
-                        <i class="fas fa-envelope"></i>
-                        Entre em Contato
+                    <i class="fa-solid fa-square-envelope"></i>
+                        <strong>Fale Comigo</strong>
                     </a>
                 </div>
             </div>
@@ -104,10 +104,10 @@
 
     <footer class="footer" data-aos="fade">
         <p class="text-center">
-            <strong>STEM - Sua Loja de Games de Boa Esperança</strong>
+            <strong>Stem verde - Sua Página de Jogos Gratuitos e Pagos</strong>
         </p>
         <p class="text-center">
-            Desenvolvido por Mayco Dyékisson da Silva
+            Desenvolvido por Kevyn silva de oliveira
         </p>
     </footer>
 

@@ -2,58 +2,75 @@
   background: #222;
 }
 .navbar .navbar-brand img {
-  height: 60px;
+  height: 80px;
+  width: 150px;
 }
 .navbar .nav-link {
-  font: 22px "Jersey 25", Inter, Arial;
+  font: 22px Rajdhani, Inter, Arial;
   color: #FFF;
   text-transform: uppercase;
 }
 .navbar .nav-link:hover {
-  color: #0DCAF0;
+  color: #198754;
 }
 .navbar .navbar-nav .nav-link.show {
-  color: #0DCAF0;
+  color: #198754;
 }
 .navbar .dropdown-menu {
   background: #222;
   border-radius: 0;
-  border-top: 5px solid #0DCAF0;
+  border-top: 5px solid #198754;
 }
 .navbar .dropdown-menu .dropdown-item {
-  font: 20px "Jersey 25", Inter, Arial;
+  font: 20px Rajdhani, Inter, Arial;
   text-transform: uppercase;
-  color: #0DCAF0;
+  color: #198754;
 }
 .navbar .btn {
   margin-left: 5px;
+  background: #fff;
+}
+.navbar .navbar-toggler {
+  background: #198754;
+  font: Rajdhani, Inter, Arial;
 }
 
 .btn {
-  font: 20px "Jersey 25", Inter, Arial;
-  border-radius: 0;
+  font: 20px Rajdhani, Inter, Arial;
+  border-radius: 10;
+  border-color: #222;
+  background: #198754;
+}
+.btn:hover {
+  color: #198754;
 }
 
 h1 {
-  font: 36px "Jersey 25", Inter, Arial;
+  font: 36px Rajdhani, Inter, Arial;
   color: #222;
   margin: 30px;
 }
 
+h2 {
+  font: 30px Rajdhani, Inter, Arial;
+  margin: 20px;
+}
+
 .card {
   margin-bottom: 15px;
-  box-shadow: 0 0 10px #CCC;
+  box-shadow: 0 0 10px #444444;
 }
 
 .footer {
   color: #FFF;
-  padding: 20px;
+  padding: 25px;
   background: #222;
   margin-top: 25px;
 }
 
 body {
-  margin-top: 80px;
+  margin-top: 102px;
+  background: #08e90413;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,5 @@
 <?php
-$url = "https://stemverde.000webhostapp.com/stem/api/banners.php";
+$url = "http://localhost/techacademy2/api/banners.php";
 
 $dadosApi = file_get_contents($url);
 
@@ -33,7 +33,7 @@ $dadosBanner = json_decode($dadosApi);
 
 <div class="container">
     <h1 class="text-center">
-        Jogos em Destaque
+        <strong>Jogos em Destaque</strong>
     </h1>
     <?php
         //print_r($dadosJogos);
@@ -50,9 +50,9 @@ $dadosBanner = json_decode($dadosApi);
                         <div class="card-text text-center">
                             <p><strong><?=$dados->nome?></strong></p>
                             <p>
-                                <a href="game/<?=$dados->id?>" title="Detalhes do Jogo" class="btn btn-danger">
+                                <a href="game/<?=$dados->id?>" title="Detalhes do Jogo" class="btn btn-success">
                                     <i class="fas fa-search"></i>
-                                    Detalhes
+                                    <strong>Detalhes</strong>
                                 </a>
                             </p>
                         </div>

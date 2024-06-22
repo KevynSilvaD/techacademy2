@@ -7,10 +7,10 @@
 <div class="container">
     <h1 class="text-center"><?=$dados->nome?></h1>
     <div class="row">
-        <div class="col-12 col-md-3">
+        <div class="col-12 col-md-5">
             <img src="<?=$dados->poster?>" alt="<?=$dados->nome?>" class="w-100">
         </div>
-        <div class="col-12 col-md-8">
+        <div class="col-12 col-md-7">
             <p>
                 <?=$dados->descricao?>
             </p>
@@ -22,7 +22,7 @@
     <h2 class="text-center">Fotos do Jogo</h2>
     <div class="row">
         <?php
-            $dadosFotos = file_get_contents("https://stemverde.000webhostapp.com/stem/api/fotos.php");
+            $dadosFotos = file_get_contents("http://localhost/techacademy2/api/fotos.php");
             $dadosFotos = json_decode($dadosFotos);
             //só as fotos do jogo
             $dados = $dadosFotos->$codigo;
