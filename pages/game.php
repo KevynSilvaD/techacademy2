@@ -17,7 +17,7 @@
         </div>
     </div>
     <h2 class="text-center">Vídeo do Jogo</h2>
-        <iframe width="100%" height="400" src="<?=$dados->trailer?>"></iframe>
+        <iframe class="container text-center" width="auto" height="500px" src="<?=$dados->trailer?>"></iframe>
         
     <h2 class="text-center">Fotos do Jogo</h2>
     <div class="row">

@@ -50,12 +50,21 @@
 
 h1 {
   font: 36px Rajdhani, Inter, Arial;
-  color: #222;
+  color: #FFF;
   margin: 30px;
 }
 
 h2 {
   font: 30px Rajdhani, Inter, Arial;
+  color: #FFF;
+  margin: 20px;
+}
+
+h3 {
+  font: 22px Inter, Arial, Tahoma;
+  border: #222;
+  text-shadow: 0 2px 2px #222;
+  color: #FFF;
   margin: 20px;
 }
 
@@ -72,11 +81,10 @@ h2 {
 }
 
 body {
-  background: #08e90413;
   border-radius: 8px;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.452);
+  box-shadow: 0 0 30px rgba(0, 255, 55, 0.767);
   width: 90%;
-  margin: 102px auto 2px;
+  margin: 102px auto 0px;
 }
 
 .btn-2 {

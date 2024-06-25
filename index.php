@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
+<?php
+    $backgroundImage =
+'http://localhost/techacademy2/images/back.jpg';
+    $someCondition = true; 
+    if ($someCondition) {
+        $backgroundImage =
+'http://localhost/techacademy2/images/back.jpg';
+    }
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,16 +23,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="images/icone.png">
-    
+   
+   <style>
+        body {
+            background-image: url('<?php echo $backgroundImage; ?>');   
+            background-size: 100%;
+        }
+    </style>
 </head>
 
-<div>
+<body> 
+    <div>
     <?php
     $url = "http://localhost/techacademy2/api/games.php";
     //importar dados
