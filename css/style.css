@@ -36,13 +36,16 @@
 }
 
 .btn {
-  font: 20px Rajdhani, Inter, Arial;
+  font: 15px Rajdhani, Inter, Arial;
   border-radius: 10;
   border-color: #222;
   background: #198754;
 }
 .btn:hover {
   color: #198754;
+}
+.btn .btn-btn {
+  font: 80px;
 }
 
 h1 {
@@ -57,7 +60,7 @@ h2 {
 }
 
 .card {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   box-shadow: 0 0 20px #198754;
 }
 
@@ -65,12 +68,31 @@ h2 {
   color: #FFF;
   padding: 25px;
   background: #222;
-  margin-top: 25px;
+  margin-top: 200px;
 }
 
 body {
-  margin-top: 102px;
   background: #08e90413;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.452);
+  width: 90%;
+  margin: 102px auto 2px;
+}
+
+.btn-2 {
+  color: black;
+  border-radius: 10px;
+  border-color: #222;
+  background-color: #198754;
+  width: 53%;
+  height: 7%;
+}
+.btn-2:hover {
+  background-color: rgba(25, 135, 84, 0);
+}
+
+.margin {
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

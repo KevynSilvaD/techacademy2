@@ -17,14 +17,14 @@
         </div>
     </div>
     <h2 class="text-center">Vídeo do Jogo</h2>
-    <iframe width="100%" height="600" src="<?=$dados->trailer?>"></iframe>
-    
+        <iframe width="100%" height="400" src="<?=$dados->trailer?>"></iframe>
+        
     <h2 class="text-center">Fotos do Jogo</h2>
     <div class="row">
         <?php
             $dadosFotos = file_get_contents("http://localhost/techacademy2/api/fotos.php");
             $dadosFotos = json_decode($dadosFotos);
-            //só as fotos do jogo
+            //fotas
             $dados = $dadosFotos->$codigo;
 
             $i = 1;

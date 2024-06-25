@@ -9,7 +9,7 @@
         array("foto"=>"{$path}imagem2.png"),
         array("foto"=>"{$path}imagem3.png"),
         array("foto"=>"{$path}imagem4.gif"),
-    );
+    );   
 
     $fotos[2] = array(
         array("foto"=>"{$path}sf1.jpg"),
@@ -40,4 +40,6 @@
 
 
     echo json_encode($fotos);
+?>
+
 

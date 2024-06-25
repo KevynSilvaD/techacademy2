@@ -50,13 +50,16 @@ $font2: Inter, Arial, Tahoma;
 }
 
 .btn {
-    font: 20px $font1;
+    font: 15px $font1;
     border-radius: 10;
     border-color: #222;
     background: #198754;
 
     &:hover {
         color: $secondary
+    }
+    & &-btn{
+        font: 80px
     }
 }
 
@@ -72,7 +75,7 @@ h2 {
 }
 
 .card {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     box-shadow: 0 0 20px #198754;
 }
 
@@ -80,10 +83,34 @@ h2 {
     color: #FFF;
     padding: 25px;
     background: $primary;
-    margin-top: 25px;
+    margin-top: 200px;
 }
 
 body {
-    margin-top: 102px;
     background: #08e90413;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.452);
+     width: 90%;
+     margin: 102px auto 2px;
+    
+
+}
+
+.btn-2{
+    color: black;
+    border-radius: 10px;
+    border-color: #222;
+    background-color: #198754;
+    width: 53%;
+    height: 7%;
+ 
+
+    &:hover {
+        background-color: 
+        transparentize($color: $secondary, $amount: 1)
+    }
+}
+
+.margin{
+    margin-top: 20px;
 }

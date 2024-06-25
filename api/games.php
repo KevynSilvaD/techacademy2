@@ -5,10 +5,12 @@
     $path = "http://localhost/techacademy2/images/";
 
     $games[3] = array("id"=>3, "nome"=>"Dream of Gear", "descricao"=>"<p>Dream of gear é um game de plataforma em 2D,no qual você vive a pele de CLB um jovem sonhador que deseja se tornar piloto de corridas, e seu objetivo é chegar ao carro antigo de seu avô,coletando as peças necessárias e desviando de objetos que podem te ferir.</p>
-    <p><strong>Corra, Pule e não se esqueça de desviar dos passarinhos, colete as caixas para bonus mas cuidado com as armadilhas.</strong></p>
+    <p><strong>Corra, Pule e não se esqueça de desviar dos passarinhos, colete as caixas para bonus mas cuidado com as armadilhas.</strong>
+    <P>(lembrando que esse é um jogo feito por mim, free-to-play, créditos ao google,pinterest e freepik pelas sprites e imagens)</p>
+    <P>Créditos pelas músicas ao <a button type=button class=btn btn-sm href=https://www.youtube.com/@FreeMusicc>Canal Free Music</a></P>
     <p>Lançado para PC, Arcade game</p>
-    <p>input: Teclado e Mouse</p>",
-    "poster"=>"{$path}poster_dream.png","banner"=>"{$path}dream.png","trailer"=>"https://www.youtube.com/embed/3sAU1fPK0K4");
+    <p>input: Teclado e Mouse</p>
+    <p><a class=btn href=#>CLIQUE PARA JOGAR</a></p>","poster"=>"{$path}poster_dream.png","banner"=>"{$path}dream.png","trailer"=>"images/video1.mp4");
 
     $games[2] = array("id"=>2, "nome"=>"Street Fighter 6", "descricao"=>"<p>Street Fighter 6 é um jogo eletrônico de luta desenvolvido e publicado pela Capcom. É a sétima entrada principal da franquia Street Fighter, e foi lançado para PlayStation 4, PlayStation 5, Windows e Xbox Series X/S em 2 de junho de 2023, ao passo que uma versão para arcade será publicada pela Taito mais tarde no mesmo ano.</p>",
     "poster"=>"{$path}poster_sf6.jpg","banner"=>"{$path}sf6.jpg","trailer"=>"https://www.youtube.com/embed/3sAU1fPK0K4");

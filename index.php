@@ -23,7 +23,7 @@
     
 </head>
 
-<body>
+<div>
     <?php
     $url = "http://localhost/techacademy2/api/games.php";
     //importar dados
@@ -77,30 +77,28 @@
             </div>
         </div>
     </nav>
-
-    <main>
-        <?php
-        //print_r($_GET);
-        $pagina = "home";
-        //verificar se foi clicado em algum menu
-        if (isset($_GET["pagina"])) {
+                            
+        <main>
+            <?php
+            $pagina = "home";
+            if (isset($_GET["pagina"])) {
             $pagina = $_GET["pagina"] ?? "home";
-            // games/1
             $pagina = explode("/", $pagina);
-            //print_r($pagina);
             $codigo = $pagina[1] ?? NULL;
             $pagina = $pagina[0] ?? "home";
-        }
+             }   
 
-        $pagina = "pages/{$pagina}.php";
+            $pagina = "pages/{$pagina}.php";
 
-        if (file_exists($pagina)) {
+            if (file_exists($pagina)) {
             include $pagina;
-        } else {
+             } else {
             include "pages/erro.php";
-        }
-        ?>
-    </main>
+            }
+            ?>
+        </main>
+
+
 
     <footer class="footer" data-aos="fade">
         <p class="text-center">
