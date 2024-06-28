@@ -47,7 +47,7 @@ $dadosBanner = json_decode($dadosApi);
                         <p>
                             <a href="game/<?= $dados->id ?>" title="Detalhes do Jogo" class="btn btn-success">
                                 <i class="fa-brands fa-searchengin"></i>
-                                <strong>Detalhes</strong>
+                                <strong>Saiba mais</strong>
                             </a>
                         </p>
                     </div>

@@ -120,7 +120,7 @@
             <strong>Stem verde - Sua Página de Jogos Gratuitos e Pagos</strong>
         </p>
         <p class="text-center">
-            Desenvolvido por Kevyn silva de oliveira
+            2024 - Desenvolvido por Kevyn silva de oliveira - todos os direitos reservados.
         </p>
     </footer>
 
